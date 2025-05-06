@@ -1,0 +1,155 @@
+The LP_V Lab Manual_DS.pdf contains lab assignments related to Distributed Systems, and here's a detailed explanation of each assignment based on the document:
+
+
+---
+
+Assignment 1: Multi-threaded Client/Server Communication using RMI
+
+Objective: Implement a Java-based Remote Method Invocation (RMI) system for communication between distributed applications.
+
+Tools: Java, JDK 1.8, rmiregistry
+
+Concepts:
+
+RMI allows calling methods on an object located on a remote machine.
+
+It involves Stub (Client proxy) and Skeleton (Server gateway).
+
+Uses a Remote Interface to define accessible methods.
+
+
+Application: Useful in building distributed Java applications like a banking system or file sharing.
+
+
+
+---
+
+Assignment 2: Distributed Application using CORBA
+
+Objective: Demonstrate object brokering via CORBA with a simple application (e.g., Calculator/String operations).
+
+Tools: CORBA (Common Object Request Broker Architecture)
+
+Concepts:
+
+CORBA allows communication between objects written in different languages over a network.
+
+Uses IDL (Interface Definition Language) to define interfaces.
+
+
+Application: Cross-platform distributed systems in finance or telecom.
+
+
+
+---
+
+Assignment 3: Parallel Sum Using MPI or OpenMP
+
+Objective: Distribute an array among processors to compute the sum in parallel.
+
+Tools: MPI (Message Passing Interface) or OpenMP
+
+Concepts:
+
+Divide the array into chunks and process in parallel.
+
+Collect intermediate results and compute total sum.
+
+
+Application: High-performance computing (HPC), data analytics.
+
+
+
+---
+
+Assignment 4: Berkeley Algorithm for Clock Synchronization
+
+Objective: Implement Berkeley’s algorithm to synchronize clocks in a distributed system.
+
+Concepts:
+
+Master node polls time from others.
+
+Calculates average time.
+
+Sends time adjustment to each node.
+
+
+Application: Used in distributed databases and real-time systems.
+
+
+
+---
+
+Assignment 5: Token Ring Based Mutual Exclusion
+
+Objective: Use a token ring protocol to ensure mutual exclusion.
+
+Concepts:
+
+A token circulates in a logical ring.
+
+Only the holder of the token can enter critical section.
+
+
+Application: Network resource sharing, file systems.
+
+
+
+---
+
+Assignment 6: Bully and Ring Algorithm for Leader Election
+
+Objective: Elect a coordinator using Bully and Ring algorithms.
+
+Concepts:
+
+Bully: Higher ID process becomes leader.
+
+Ring: Processes arranged in a ring; election token passed.
+
+
+Application: Distributed system recovery and coordination.
+
+
+
+---
+
+Assignment 7: Create and Consume a Web Service
+
+Objective: Create a simple web service and write a distributed application to consume it.
+
+Tools: SOAP/REST, Java/Python/C#
+
+Concepts:
+
+Service-oriented architecture (SOA).
+
+Web service provides functions to remote clients.
+
+
+Application: Weather apps, payment gateways, microservices.
+
+
+
+---
+
+Assignment 8: Mini Project
+
+Objective: Design and develop a distributed multiplayer game.
+
+Concepts:
+
+Use client-server or peer-to-peer communication.
+
+Handle synchronization, user interaction, real-time updates.
+
+
+Application: Real-world simulation games, learning tools.
+
+
+
+---
+
+Would you like implementation help or sample code for any of these assignments?
+
