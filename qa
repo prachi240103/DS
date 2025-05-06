@@ -1,0 +1,477 @@
+Here are the answers to all the questions from the Distributed Computing System Lab Practice – V Question Bank, organized by assignment:
+
+
+---
+
+Assignment 1: RMI (Remote Method Invocation)
+
+1. Remote Method Invocation (RMI):
+A Java API that allows an object to invoke methods on an object running in another JVM.
+
+
+2. Stub and Skeleton in RMI:
+
+Stub: Client-side proxy for the remote object.
+
+Skeleton: Server-side helper for dispatching calls (used before Java 1.2).
+
+
+
+3. Steps to Implement RMI Application:
+
+Define remote interface
+
+Implement the interface
+
+Compile with rmic
+
+Start rmiregistry
+
+Bind remote object
+
+Create client program
+
+
+
+4. Simple RMI Program:
+(Available on request with code snippet.)
+
+
+5. Advantages of RMI:
+
+Object-oriented
+
+Easy communication over network
+
+Automatic serialization
+
+Integrated with Java security
+
+
+
+6. Starting rmiregistry:
+Use rmiregistry command in terminal. Required to register remote objects.
+
+
+7. Local vs Remote Method Calls:
+
+Local: Within same JVM
+
+Remote: Across JVMs, involves stubs and networking
+
+
+
+8. Handling RemoteException:
+Must be caught or declared in method signature using throws.
+
+
+9. Naming Service Role:
+Registers and looks up remote objects using names.
+
+
+10. RMI Lifecycle:
+Client -> Stub -> Skeleton -> Remote Object (via registry)
+
+
+
+
+---
+
+Assignment 2: CORBA
+
+11. CORBA:
+A standard for distributed object communication across programming languages and platforms.
+
+
+12. IDL in CORBA:
+Defines interfaces in a language-neutral way.
+
+
+13. Steps to Create CORBA Application:
+
+
+
+Define IDL
+
+Generate stubs/skeletons
+
+Implement server/client
+
+Compile and run using ORB
+
+
+14. Role of ORB:
+Manages communication between client and server objects.
+
+
+15. CORBA vs RMI:
+
+
+
+CORBA: Language-independent
+
+RMI: Java-specific
+
+
+16. CORBA Calculator Program:
+(Available on request with code snippet.)
+
+
+17. IIOP:
+Internet Inter-ORB Protocol used for CORBA communication over networks.
+
+
+18. POA in CORBA:
+Portable Object Adapter helps manage server-side objects.
+
+
+19. Naming Service in CORBA:
+Allows clients to locate server objects.
+
+
+20. Java-CORBA Integration:
+Uses Java IDL and ORB classes for interoperation.
+
+
+
+
+---
+
+Assignment 3: MPI or OpenMPI
+
+21. MPI:
+A standard for message passing in parallel computing.
+
+
+22. Install MPJ Express:
+
+
+
+Download MPJ
+
+Set environment variables
+
+Compile/run using mpjrun.sh
+
+
+23. Java MPI Array Program:
+(Available on request with code snippet.)
+
+
+24. MPI and Parallelism:
+Enables multiple processes to run tasks concurrently.
+
+
+25. MPI vs OpenMP:
+
+
+
+MPI: Distributed memory
+
+OpenMP: Shared memory
+
+
+26. MPI_COMM_WORLD:
+Default communicator connecting all processes.
+
+
+27. MPI_Send and MPI_Recv:
+Used to send/receive messages between processes.
+
+
+28. Scatter vs Gather:
+
+
+
+Scatter: Distributes data
+
+Gather: Collects data
+
+
+29. Intermediate Sums in MPI:
+Each processor calculates partial sum; final sum collected via Reduce.
+
+
+30. SPMD Model in MPJ:
+All processors run the same code on different data.
+
+
+
+
+---
+
+Assignment 4: Berkeley Algorithm
+
+31. Berkeley’s Algorithm:
+Synchronizes clocks without relying on an accurate time source.
+
+
+32. Berkeley Steps:
+
+
+
+Master polls slaves
+
+Calculates average
+
+Adjusts clocks
+
+
+33. Master Node Selection:
+Predefined or elected node acts as master.
+
+
+34. Importance of Clock Sync:
+Ensures event ordering, coordination, and consistency.
+
+
+35. Berkeley vs Cristian’s:
+
+
+
+Berkeley: No external time source
+
+Cristian’s: Uses time server
+
+
+36. Average Offset Calculation:
+Average of all offsets (excluding faulty nodes).
+
+
+37. Features of Berkeley:
+
+
+
+Dynamic master
+
+Fault tolerance
+
+No accurate time server required
+
+
+38. Handling Faulty Nodes:
+Ignores outlier responses when computing average.
+
+
+39. Master-Slave Roles:
+
+
+
+Master: Coordinates
+
+Slaves: Respond with time, adjust clocks
+
+
+40. Example:
+Master polls 3 nodes, collects offsets, calculates average, sends adjustments.
+
+
+
+
+---
+
+Assignment 5: Token Ring Algorithm
+
+41. Token Ring Algorithm:
+A mutual exclusion method where a token circulates to grant access.
+
+
+42. Token Ring Program:
+(Available on request with code snippet.)
+
+
+43. Token Passing:
+Logical ring passes token to next process.
+
+
+44. Lost Token:
+Requires regeneration using timeout or election.
+
+
+45. Ensuring Mutual Exclusion:
+Only token holder enters critical section.
+
+
+46. Advantages:
+
+
+
+Fairness
+
+Predictable access time
+
+
+47. Drawbacks:
+
+
+
+Token loss
+
+High overhead if processes are idle
+
+
+48. Message Complexity:
+O(n) per critical section access.
+
+
+
+
+---
+
+Assignment 6: Bully and Ring Algorithm
+
+49. Bully Algorithm:
+Highest-ID process becomes leader.
+
+
+50. Ring Algorithm:
+Circular message passing to elect leader.
+
+
+51. Bully Program:
+(Available on request with code snippet.)
+
+
+52. Ring Program:
+(Available on request with code snippet.)
+
+
+53. Election in Bully:
+Lower-ID node sends election messages to higher IDs.
+
+
+54. Bully Assumptions:
+
+
+
+Unique IDs
+
+Synchronous system
+
+Reliable message delivery
+
+
+55. Bully vs Ring:
+
+
+
+Bully: Faster but more messages
+
+Ring: Simple but slower
+
+
+56. Ring Fairness:
+All nodes participate equally in election.
+
+
+
+
+---
+
+Assignment 7: Web Services
+
+57. Web Service:
+Software service accessible over network using standard protocols.
+
+
+58. SOAP vs REST:
+
+
+
+SOAP: XML-based, strict
+
+REST: Lightweight, uses HTTP methods
+
+
+59. SOAP Web Service Steps:
+
+
+
+Define WSDL
+
+Implement service
+
+Deploy using server (e.g., Apache Axis)
+
+
+60. WSDL:
+Web Services Description Language – describes the web service.
+
+
+61. SOAP Architecture:
+Client → SOAP request → Server → SOAP response
+
+
+62. UDDI:
+Universal Description, Discovery and Integration – registry for web services.
+
+
+63. REST vs Traditional:
+REST is stateless, uses HTTP; traditional uses more complex protocols.
+
+
+64. REST Web Service Steps:
+
+
+
+Define resources
+
+Use annotations (e.g., JAX-RS)
+
+Deploy in servlet container
+
+
+65. HTTP Methods in REST:
+
+
+
+GET
+
+POST
+
+PUT
+
+DELETE
+
+
+66. Consuming Web Service in Java:
+Use HttpURLConnection or libraries like Jersey/Retrofit.
+
+
+
+
+---
+
+Extra Questions
+
+67. Distributed Computing:
+Computing across multiple systems to perform a task.
+
+
+68. Fault Tolerance Importance:
+Ensures system reliability despite failures.
+
+
+69. Challenges in Distributed Systems:
+
+
+
+Network latency
+
+Synchronization
+
+Fault tolerance
+
+Scalability
+
+
+70. Scalability:
+System’s ability to handle growth efficiently.
+
+
+
+
+---
+
+Let me know if you need any diagrams or programs from the list!
+
